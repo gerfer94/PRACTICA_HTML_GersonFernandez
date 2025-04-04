@@ -1,0 +1,40 @@
+body {
+    background-color: #0a192f;
+    color: #ccd6f6;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #112240;
+}
+
+nav .nav-link {
+    color: #64ffda;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lintern-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1000;
+    background: radial-gradient(circle 300px at -100px -100px, rgba(17, 34, 64, 1), transparent);
+    transition: background 0.1s ease-out;
+}

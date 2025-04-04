@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="lintern-effect"></div>
+    <header class="container-fluid text-light p-5">
+        <nav class="container-fluid p-3">
+            <ul class="nav w-100">
+                <li class="nav-item me-auto">
+                    <a class="nav-link text-light fw-bold">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/projects.html">Proyectos</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container text-left">
+            <h1 class="fw-bold">Mis Proyectos</h1>
+            <p>Aquí puedes ver algunos de los proyectos en los que he trabajado.</p>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Proyecto 1 -->
+            <div class="col-md-4">
+                <h3>Tarea: Desarrollo de aplicación de escritorio cliente servidor con acceso a datos</h3>
+                <button class="btn btn-primary video-btn" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.youtube.com/embed/1saPh_XxLxM?si=PjEWZANQMv1FGVaZ">
+                    <i class="fa-brands fa-youtube"></i>
+                </button>
+                <a href="https://github.com/gerfer94/frmPrincipal" class="btn btn-dark mt-2" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+    
+            <!-- Proyecto 2 -->
+            <div class="col-md-4">
+                <h3>Tarea: Desarrollo de aplicación de escritorio Multicapas con acceso a datos. (PRIMERA ENTREGA)</h3>
+                <button class="btn btn-primary video-btn" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.youtube.com/embed/L4ch3JAPJAc?si=aLDk4PJgZeTbk2Du">
+                    <i class="fa-brands fa-youtube"></i>
+                </button>
+                <a href="https://github.com/gerfer94/FACTURACION_CAPAS_DISENO_MODERNO" class="btn btn-dark ms-2" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+    
+            <!-- Proyecto 3 -->
+            <div class="col-md-4">
+                <h3>Tarea: Desarrollo de aplicación de escritorio Multicapas con acceso a datos. (SEGUNDA ETAPA)</h3>
+                <button class="btn btn-primary video-btn" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.youtube.com/embed/1oiK_MkB29g?si=dTRIh4puvuOz6Y_N">
+                    <i class="fa-brands fa-youtube"></i>
+                </button>
+                <a href="https://drive.google.com/file/d/1Ole40oOOoxSxXwQSS_Mc2LUIj7zgkWxb/view?usp=sharing" class="btn btn-dark ms-2" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Modal para Video -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Video del Proyecto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="videoFrame" width="100%" height="400px" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container text-center p-3">
+        <p>&copy; 2025 Gerson Gustavo Fernandez Badillo</p>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".video-btn").click(function() {
+                var videoURL = $(this).data("video");
+                $("#videoFrame").attr("src", videoURL);
+            });
+
+            $("#videoModal").on("hidden.bs.modal", function() {
+                $("#videoFrame").attr("src", "");
+            });
+        });
+    </script>
+</body>
+</html>
